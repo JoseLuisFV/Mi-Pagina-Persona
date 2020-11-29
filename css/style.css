@@ -1,0 +1,87 @@
+:root{
+    --main-page-color: #192C2D;
+    --header-text-color: #0E4050;
+    --primary-color: #33ff99;
+    --secondary-color: #01a5b3;
+}
+
+html{
+    font-size: 62.5%;
+}
+ 
+body{
+    background-color: var(--main-page-color);
+}
+
+span{
+    text-transform: capitalize;
+    color: var(--primary-color);
+}
+
+.header{
+    height: 30%;
+    background-image: linear-gradient(var(--secondary-color), var(--primary-color));
+    text-align: center;
+}
+
+.header-container-titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-identity{
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-size: 4.7vh;
+    order: 1;
+    color: var(--header-text-color);
+}
+
+.my-profesion{
+    font-weight: lighter;
+    font-family: sans-serif;
+    margin-top: 10vh;
+    order: 0;
+    font-size: 2.5vh;
+    color: var(--header-text-color);
+}
+
+.main-menu{
+    display: inline-block;
+    height: 14vh;
+    width: 14vh;
+    background-image: linear-gradient(#FF4A33 35%
+    , #C34DFF);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0,0,0,.35);
+}
+
+.philosofy-conteiner{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 84%;
+    display: block;
+    border-bottom: 7px ridge var(--primary-color);
+    border-radius: 25%;
+}
+
+.philosofy-frase{
+    color: whitesmoke;
+    font-size: 2.6rem;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.conteiner-logo{
+    margin-top: 46px;
+    margin-bottom: 40px;  
+}
+
+.conteiner-logo__image{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 240px;
+}
