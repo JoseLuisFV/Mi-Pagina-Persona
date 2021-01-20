@@ -5,14 +5,29 @@
     --secondary-color: #01a5b3;
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4{
+    text-transform: capitalize;
+    color: white;
+    font-family: monospace;
+}
+
 html{
     font-size: 62.5%;
 }
 
 
+
 li{
-    list-style: none;
-    
+    list-style: none;   
 }
 
 a{
@@ -20,22 +35,45 @@ a{
     text-decoration: none;
 }
 
+body{
+    box-sizing: border-box;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+main{
+    width: 100%;
+    margin: 0; 
+}
+
+.header__first-part div,
+.header__second-part,
+.second-menu__enlace,
+.universidad{
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner-logo__image,
+.card-universidad,
+.universidad__description{
+    position: relative;
+    margin: 0 auto;
+}
+
 .header{
     height: 100vh;
-    width: 100vw;
-    position: relative;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .header__first-part{
-    
-    background-image: linear-gradient(var(--secondary-color), var(--primary-color));
-    height: 19%;
-    padding-top: 9vh;
+    background-color: var(--primary-color);
+    height: 23%;
+    padding-top: 13vh;
 }
 
 .header__first-part div{
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
@@ -44,6 +82,7 @@ a{
     font-size: 3.7rem;
     order: 1;
     color: var(--header-text-color);
+    font-family: serif;
 }
 
 .my-profesion{
@@ -55,38 +94,41 @@ a{
     color: var(--header-text-color);
 }
 
-.header__second-part{
-    height: 11%;
-    background-image: linear-gradient(var(--primary-color) 60%, var(--main-page-color) 40%);
+.float-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 13%;
+    background-image: linear-gradient(var(--secondary-color), var(--primary-color));
+    z-index: 1000;
 }
+
 .main-menu{
-    position: relative;
-    display: block;
-    height: 100%;
+    height: 11vh;
     width: 11vh;
     background-image: linear-gradient(#FF4A33 35%
     , #C34DFF);
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0,0,0,.35);
-    margin: 0 auto;
 }
 
-.header__third-part{
+.header__second-part{
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: var(--main-page-color);
-    height: 70%;
+    height: 77%;
 }
 
 .philosofy-conteiner{
     margin: 0 auto;
     width: 84%;
-    display: block;
     border-bottom: 7px ridge var(--primary-color);
     border-radius: 25%;
-    padding-top: 2vh;
 }
 
 .philosofy-frase{
@@ -103,10 +145,9 @@ a{
 }
 
 .conteiner-logo__image{
-    position: relative;
     display: block;
-    margin: 0 auto;
-    width: 220px;
+    width: 200px;
+    z-index: 0;
 }
 
 .second-menu{
@@ -121,15 +162,12 @@ a{
 .second-menu__enlace{
     width: 80px;
     height: 80px;
-    display: flex;
-    flex-direction: column;
     text-align: center;
 }
 
 .second-menu__enlace div{
     color: var(--header-text-color);
     margin: 0 auto;
-    display: block;
     height: 5.0rem;
     width: 5.0rem;
     background-image: linear-gradient(var(--primary-color), var(--secondary-color));
@@ -142,7 +180,158 @@ a{
 .second-menu__enlace span{
     font-family: sans-serif;
     margin: 5px 0;
-    display: block;
     color: whitesmoke;
     font-size: 2.0rem;
 }
+
+.educacion{
+    text-align: center;
+    background-color: var(--main-page-color);
+}
+
+.educacion__title{  
+    font-size: 6vh;
+    margin: 0 auto;
+    font-weight: 100;
+    margin-bottom: 4vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color:#1D3233;
+}
+
+.card-universidad{
+    display: flex;
+    height: 16vh;
+    width: 90%;
+    background-color: #c3fffe;
+    border-radius: 15px;
+    margin-bottom: 4vh;
+}
+
+.card-universidad__title{
+    position: relative;
+    display: inline-block;
+    font-size: 5vh;
+    font-family: sans-serif;
+    color: white;
+    height: 100%;
+    width: 38%;
+    padding-top: 5.5vh;
+    background-image: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    left: 0;
+    text-align: end;
+    z-index: 100;
+    border-radius: 15px;
+}
+
+.card-universidad__title::before{
+    content: '';
+    position: absolute;
+    height: 16vh;
+    width: 16vh;
+    background-image: url(../images/engrane.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    bottom: 0.1vh;
+    right: -15.9vh;
+}
+
+.card-universidad figure{
+    width: 62%;
+    overflow: hidden;
+}
+
+.card-universidad__image{
+    position: relative;
+    bottom: 4vh;
+}
+
+.universidad__description{
+    font-size: 2.2rem;
+    font-family: sans-serif;
+    color: whitesmoke;
+    width: 90%;
+    margin-bottom: 3vh;
+    letter-spacing: 1.2px;
+    text-align: end;
+}
+
+.cursos{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.cursos__titulo{
+    position: relative;
+    font-size: 5vh;
+    margin: 0;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+}
+
+.cursos__titulo::before{
+    content: '';
+    position: absolute;
+    width: 21.8vw;
+    height: 12vw;
+    background-image: url(../assets/circuit-decorator-left.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 11.2vw;
+    bottom: 1vh
+}
+
+.cursos__titulo::after{
+    content: '';
+    position: absolute;
+    width: 21.8vw;
+    height: 12vw;
+    background-image: url(../assets/circuit-decorator-right.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 11.2vw;
+    bottom: 1vh
+}
+
+.curso{
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 14px;
+    width: 70%; 
+    height: 5vh; 
+    text-align: start;
+}
+
+.curso::before{
+    content: '';
+    position: absolute;
+    width: 27px;
+    height: 40px;
+    background-image: url(../assets/decorator-list.svg
+    );
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: -15px;
+}
+
+.curso__nombre{
+    
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 2.2rem;
+    color: #adf1ff;
+    text-transform: capitalize;
+    font-weight: bold;
+   
+}
+
+.curso figure{
+    position: absolute;
+    display: inline-block;
+    right: 0;
+}
+.curso__image{
+    height: 5vh;
+    width: 5vh;
+}
+
